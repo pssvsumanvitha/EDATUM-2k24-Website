@@ -26,12 +26,14 @@
 
 <script>
     var preloader = document.getElementById('Loader');
-  
     function myLoader(){
         preloader.style.display='none';
+       
     }
 </script>
 <!-- Loader Screen Ended -->
+<div id="sasadad">
+
 
 
 
@@ -67,8 +69,8 @@
     const navLinks = document.querySelector(".nav-links");
     const links = document.querySelectorAll(".nav-links li");
     
-    hamburger.addEventListener('click', ()=>{
-       //Animate Links
+    hamburger.addEventListener('click', () => {
+        //Animate Links
         navLinks.classList.toggle("open");
         links.forEach(link => {
             link.classList.toggle("fade");
@@ -77,29 +79,43 @@
         //Hamburger Animation
         hamburger.classList.toggle("toggle");
     });
+    
+    // Close the menu when a list element is clicked
+    links.forEach(link => {
+        link.addEventListener('click', () => {
+            navLinks.classList.remove("open");
+            links.forEach(link => {
+                link.classList.remove("fade");
+            });
+            hamburger.classList.remove("toggle");
+        });
+    });
         </script>
     </nav>
 
     <!-- Navigation Bar Ended -->
-<div class="homepagesection">
-    <div class="homebac">
-    </div>
-    <div class="hometext">
-        
-        <h1 class="outline glich"> EDATUM</h1>
-        <img src="EDATUM Logo.png" class="EDATUMLOGO" alt="">
-
-        <p class="EDATUMINFO"> E-datum, guided by the ethos <i> "ponder, innovate, craft"  </i> fearlessly tackles the realm of impossibilities.
-            This forward-thinking entity <i> embraces the </i> 🎯🎯<i> challenges </i> of transcending limitations.
-         </p>
-
-         <div class="registration">
-           <a href="#EventsTab"> <button>Register Now</button></a>
-            <a href="#AboutText">Know more</a>
-         </div>
-    </div>
+    <div class="homepagesection">
+        <div class="homebac">
+        </div>
+        <div class="hometext">
+                <img src="strides.png" class="strides">
+               
+            <h1 class="outline glich"> EDATUM</h1>
+            <img src="EDATUM Logo.png" class="EDATUMLOGO" alt="">
     
-</div>
+            <h4 class="a2K24">2024</h4>
+    
+            <p class="EDATUMINFO"> E-datum, guided by the ethos <i> "ponder, innovate, craft"  </i> fearlessly tackles the realm of impossibilities.
+                This forward-thinking entity <i> embraces the </i> 🎯🎯<i> challenges </i> of transcending limitations.
+             </p>
+    
+             <div class="registration">
+               <a href="#EventsTab"> <button>Register Now</button></a>
+                <a href="https://drive.google.com/file/d/1miY_OpDgZ3Fi8JJT_CSjGaSeuSLWZBjq/view?usp=sharing">View Poster</a>
+             </div>
+        </div>
+        
+    </div>
 <!-- About Section Bar Started -->
     <div class="About">
         <!-- <img src="" class="qe w"> -->
@@ -129,7 +145,7 @@
         
             <div class="EventPic">
                 <h3>01</h3>
-                <img src="Data Vishleshana.jpg" alt="">
+               <a href="Data Vishleshana.jpg"> <img src="Data Vishleshana.jpg" alt=""></a>
             </div>
             <div class="WhiteSpace">
 
@@ -151,7 +167,7 @@
         
         <div class="EventPic">
             <h3>02</h3>
-            <img src="Navaacharana.jpg" alt="">
+         <a href="Navaacharana.jpg">  <img src="Navaacharana.jpg" alt=""></a> 
         </div>
         <div class="WhiteSpace">
 
@@ -173,7 +189,7 @@
         
     <div class="EventPic">
         <h3>03</h3>
-        <img src="Data Utpad Pradarshan.jpg" alt="">
+       <a href="Data Utpad Pradarshan.jpg"> <img src="Data Utpad Pradarshan.jpg" alt=""></a>
     </div>
     <div class="WhiteSpace">
 
@@ -195,7 +211,7 @@
         
 <div class="EventPic">
     <h3>04</h3>
-    <img src="Data Pravachan Team.jpg" alt="">
+   <a href="Data Pravachan Team.jpg"><img src="Data Pravachan Team.jpg" alt=""></a> 
 </div>
 <div class="WhiteSpace">
 
@@ -323,6 +339,7 @@
 
 <!-- Footer ended -->
 
+</div>
 </div>
 </body>
 </html>
